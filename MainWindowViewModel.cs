@@ -65,6 +65,22 @@ namespace WpfApp1
                 return new CommandHandler(() => MyAction(v), _canExecute);
             }
         }
+        public ICommand QuitPushed
+        {
+            get
+            {
+                var v = check_sender();
+                return new CommandHandler(() => MyAction(v), _canExecute);
+            }
+        }
+        public ICommand LogOutPushed
+        {
+            get
+            {
+                var v = check_sender();
+                return new CommandHandler(() => MyAction(v), _canExecute);
+            }
+        }
         private string check_sender([CallerMemberName]string memberName = "")
         {
             return memberName;
@@ -131,9 +147,13 @@ namespace WpfApp1
                 mainWindow.stockChartDock.Background = new SolidColorBrush(Color.FromRgb(198, 61, 15));
                 mainWindow.stockDatagrid.Background = new SolidColorBrush(Color.FromRgb(255, 140, 105));
             }
-            else if (commandName=="Exit")
+            else if (commandName== "QuitPushed")
             {
                 mainWindow.Close();
+            }
+            else if(commandName == "LogOutPushed")
+            {
+                mainWindow.LoginFrame.Content = new Login_Page(mainWindow);
             }
         }
     }

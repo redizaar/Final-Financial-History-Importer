@@ -167,7 +167,7 @@
                                 <Expander.Header>
                                     <BulletDecorator>
                                         <BulletDecorator.Bullet>
-                                            <Button Height="45" Width="125" x:Name="ExitButton" Content="Exit" Command="{Binding Path=ExitPushed}">
+                                            <Button Height="45" Width="125" x:Name="ExitButton" Content="Exit">
                                                 <Button.Template>
                                                     <ControlTemplate>
                                                         <Canvas>
@@ -182,8 +182,8 @@
                                 </Expander.Header>
                                 <WrapPanel>
                                     <StackPanel>
-                                        <Button Margin="20,5,5,5" Foreground="white" Content="Quit" Background="Transparent" FontSize="14" Width="120"/>
-                                        <Button Margin="20,5,5,5" Foreground="white" Content="Log out" Background="Transparent" FontSize="14" Width="120"/>
+                                        <Button Margin="20,5,5,5" Foreground="white" Content="Quit" Background="Transparent" FontSize="14" Width="120" Command="{Binding Path=QuitPushed}"/>
+                                        <Button Margin="20,5,5,5" Foreground="white" Content="Log out" Background="Transparent" FontSize="14" Width="120" Command="{Binding Path=LogOutPushed}"/>
                                     </StackPanel>
                                 </WrapPanel>
                             </Expander>
