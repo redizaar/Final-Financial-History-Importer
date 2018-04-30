@@ -131,14 +131,6 @@ namespace WpfApp1
             {
                 foreach (var transaction in tableAttributes)
                 {
-                    if (transaction.getWriteDate() != null && transaction.getWriteDate().Length >= 12)
-                    {
-                        transaction.setWriteDate(transaction.getWriteDate().Substring(0, 12));
-                    }
-                    else
-                    {
-                        transaction.setWriteDate(DateTime.Now.ToString("yyyy/MM/dd"));
-                    }
                     if (transaction.getProfit() != null && transaction.getProfit()!="-")
                     {
                         try

@@ -130,20 +130,6 @@ namespace WpfApp1
                     }
                 }
             }
-            if (tableAttributes != null)
-            {
-                foreach (var transaction in reference)
-                {
-                    if (transaction.getWriteDate() != null && transaction.getWriteDate().Length >= 12)
-                    {
-                        transaction.setWriteDate(transaction.getWriteDate().Substring(0, 12));
-                    }
-                    else
-                    {
-                        transaction.setWriteDate(DateTime.Now.ToString("yyyy/MM/dd").Substring(0, 12));
-                    }
-                }
-            }
             tableAttributes = reference;
             foreach(var x in tableAttributes)
             {

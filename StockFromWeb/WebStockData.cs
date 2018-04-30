@@ -73,7 +73,6 @@ namespace WpfApp1
             Thread sqlThread = new Thread(threadStart);
             sqlThread.IsBackground = true;
             sqlThread.Start();
-            sqlThread.Join();
         }
         private void writeStocksToSQL(List<Stock> stocksFromCSV)
         {

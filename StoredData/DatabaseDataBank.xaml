@@ -225,14 +225,14 @@
                     </DataGridTextColumn.CellStyle>
                 </DataGridTextColumn>
                 <DataGridTextColumn Header=" Amount(HUF)"  Width="100" Binding="{Binding transactionPrice}"/>
-                <DataGridTextColumn Header=" Account number" Width="130" Binding="{Binding accountNumber}">
+                <DataGridTextColumn Header=" Account number" Width="155" Binding="{Binding accountNumber}">
                     <DataGridTextColumn.CellStyle>
                         <Style TargetType="DataGridCell">
                             <Setter Property="ToolTip" Value="{Binding accountNumber}" />
                         </Style>
                     </DataGridTextColumn.CellStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Header=" Bank name" Width="100" Binding="{Binding bankName}"/>
+                <DataGridTextColumn Header=" Bank name" Width="auto" Binding="{Binding bankName}"/>
                 <DataGridTextColumn Header=" Date of Import" Width="*" Binding="{Binding writeDate}"/>
             </DataGrid.Columns>
         </DataGrid>
